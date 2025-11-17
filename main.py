@@ -7,7 +7,7 @@ from bson import ObjectId
 
 from database import db, create_document, get_documents
 
-app = FastAPI(title="Akuapem Connect API", description="Connect businesses, products, attractions, and community updates across the Eastern Region of Ghana.")
+app = FastAPI(title="East Link Connect API", description="Connect businesses, products, attractions, and community updates across the Eastern Region of Ghana.")
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,7 +19,7 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return {"name": "Akuapem Connect API", "status": "ok"}
+    return {"name": "East Link Connect API", "status": "ok"}
 
 # Schemas endpoint for admin tooling
 @app.get("/schema")
