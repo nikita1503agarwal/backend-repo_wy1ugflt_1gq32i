@@ -1,10 +1,10 @@
 """
-Database Schemas for Akuapem Connect
+Database Schemas for East Link Connect
 
 Each Pydantic model represents a MongoDB collection.
 Collection name is the lowercase of the class name.
 """
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 from typing import Optional, List
 
 class Business(BaseModel):
@@ -16,7 +16,7 @@ class Business(BaseModel):
     email: Optional[str] = Field(None, description="Contact email")
     website: Optional[str] = Field(None, description="Website or social link")
     address: Optional[str] = Field(None, description="Address or landmark")
-    town: Optional[str] = Field(None, description="Town within Akuapem/Eastern Region")
+    town: Optional[str] = Field(None, description="Town within the Eastern Region")
     region: str = Field("Eastern Region", description="Region")
     latitude: Optional[float] = Field(None, description="GPS latitude")
     longitude: Optional[float] = Field(None, description="GPS longitude")
@@ -55,3 +55,11 @@ class Update(BaseModel):
     category: Optional[str] = Field(None, description="e.g., event, announcement, market")
     town: Optional[str] = Field(None, description="Town/Area")
     images: Optional[List[str]] = Field(default_factory=list, description="Image URLs")
+
+class User(BaseModel):
+    name: str = Field(..., description="Full name")
+    email: EmailStr = Field(..., description="Unique email")
+    hashed_password: str = Field(..., description="BCrypt hashed password")
+    avatar: Optional[str] = Field(None, description="Avatar URL")
+    follows: List[str] = Field(default_factory=list, description="Followed community towns/tags")
+    role: str = Field("user", description="user | admin")

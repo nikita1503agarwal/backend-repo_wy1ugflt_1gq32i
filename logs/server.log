@@ -1,11 +1,23 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [205] using StatReload
-INFO:     Started server process [207]
+INFO:     Started reloader process [391] using StatReload
+INFO:     Started server process [393]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:32814 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:57250 - "GET /api/businesses HTTP/1.1" 200 OK
-INFO:     172.20.0.1:57264 - "GET /api/businesses HTTP/1.1" 200 OK
-INFO:     172.20.0.1:49478 - "GET /api/businesses HTTP/1.1" 200 OK
-INFO:     172.20.0.1:49492 - "GET /api/businesses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:60236 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:60244 - "GET /stories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:60246 - "GET /api/businesses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:60272 - "GET /stories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:60244 - "GET /api/businesses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38434 - "GET /stories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38426 - "GET /api/businesses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38436 - "GET /stories HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38434 - "GET /api/businesses HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46478 - "GET /api/businesses?q=its%20digitalus HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46488 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     172.20.0.1:46488 - "POST /auth/register HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45750 - "GET /api/products?q=its%20digitalus HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45752 - "GET /api/attractions?q=its%20digitalus HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45752 - "GET /api/businesses?q=its%20digitalus HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45752 - "GET /api/products?q=its%20digitalus HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45752 - "GET /api/businesses?q=its%20digitalus HTTP/1.1" 200 OK
